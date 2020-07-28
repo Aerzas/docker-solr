@@ -1,0 +1,10 @@
+# Docker
+.dockerignore
+Dockerfile
+build.sh
+
+# Git
+**/.git/
+
+# Text files
+**/*.md
