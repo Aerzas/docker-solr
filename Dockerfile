@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk14:jre-14.0.1_7-alpine
+FROM adoptopenjdk/openjdk16:jre-16.0.1_9-alpine
 
 ARG SOLR_VERSION
 ARG SOLR_SHA512
