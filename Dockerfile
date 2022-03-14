@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk16:jre-16.0.1_9-alpine
+FROM alpine:3.15.0
 
 ARG SOLR_VERSION
 ARG SOLR_SHA512
@@ -18,7 +18,7 @@ RUN set -ex; \
     # Build dependencies
     apk add --no-cache --virtual .build ca-certificates gnupg wget; \
     # Runtime dependencies
-    apk add --no-cache bash; \
+    apk add --no-cache bash openjdk17-jre-headless; \
     # Setup home folder
     GNUPGHOME="/tmp/gnupg_home"; \
     mkdir -p "${GNUPGHOME}"; \
