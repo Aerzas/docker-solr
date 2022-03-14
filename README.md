@@ -10,7 +10,7 @@ Docker Hub image: [https://hub.docker.com/r/aerzas/solr](https://hub.docker.com/
 version: '3.5'
 services:
     php:
-        image: aerzas/solr:8-1.1.0
+        image: aerzas/solr:8-latest
         environment:
             CORE_NAME: example
             CORE_CONFIGSET: custom
