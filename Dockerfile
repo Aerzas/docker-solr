@@ -1,5 +1,6 @@
 FROM alpine:3.16.0
 
+ARG SOLR_PACKAGE
 ARG SOLR_VERSION
 ARG SOLR_SHA512
 ARG SOLR_KEYS
@@ -10,9 +11,9 @@ ENV PATH="/opt/solr/bin:$PATH" \
     SOLR="/opt/solr" \
     SOLR_DATA_HOME="/var/solr" \
     SOLR_HOME="/opt/solr/server/solr" \
-    SOLR_CLOSER_URL="http://www.apache.org/dyn/closer.lua?filename=lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz&action=download" \
-    SOLR_DIST_URL="https://www.apache.org/dist/lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz" \
-    SOLR_ARCHIVE_URL="https://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz"
+    SOLR_CLOSER_URL="http://www.apache.org/dyn/closer.lua?filename=${SOLR_PACKAGE}/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz&action=download" \
+    SOLR_DIST_URL="https://www.apache.org/dist/${SOLR_PACKAGE}/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz" \
+    SOLR_ARCHIVE_URL="https://archive.apache.org/dist/${SOLR_PACKAGE}/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz"
 
 RUN set -ex; \
     # Build dependencies

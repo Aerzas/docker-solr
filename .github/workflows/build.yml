@@ -13,11 +13,13 @@ jobs:
         include:
           -
             solr-version: 8
+            solr-package: lucene/solr
             solr-package-version: 8.11.2
             solr-sha512: 22fedcc0090eda72c3c5a5ea769c93adaf7d92c5c4479993f009ef0b9d42de5bd2ed1e0565ca01f3428587d8a3836286aa3017aab157050f2bd5bc3482fdebaa
             solr-keys: 86EDB9C33B8517228E88A8F93E48C0C6EF362B9E
           -
             solr-version: 9
+            solr-package: solr/solr
             solr-package-version: 9.0.0
             solr-sha512: 383c6b6f352f2a385ece99b2b0a82e1552430aea65c6c33e5569da422138844192db4e06f58699325af55ee631694e16f836a5bbf8556f86fdeabc0cfa0533d5
             solr-keys: 3558857D1F5754B78C7F8B5A71A45A3D0D8D0B93
@@ -44,6 +46,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           build-args: |
+            SOLR_PACKAGE=${{ matrix.solr-package }}
             SOLR_VERSION=${{ matrix.solr-package-version }}
             SOLR_SHA512=${{ matrix.solr-sha512 }}
             SOLR_KEYS=${{ matrix.solr-keys }}
