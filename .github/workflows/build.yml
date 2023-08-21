@@ -20,9 +20,9 @@ jobs:
           -
             solr-version: 9
             solr-package: solr/solr
-            solr-package-version: 9.1.1
-            solr-sha512: 59fd47185196fc6b0fad4b6b2ba547d136cc0c688addc9833129086944cc90e185a18c33fd70523edddad1a6ebe7b4cd893be5065c2b01fe21a5026bdb7e5d9f
-            solr-keys: C3E7CBD9B9FE2B419EB14B89612B39A5BC981763
+            solr-package-version: 9.3.0
+            solr-sha512: fcd1ca482744f4a72c21c59d1877f3aeeb4b8683cf89af70bb10d29fc07da1858628b2666e3c363227e4b2f7a8ef33c2b63065811ae1c2f2843fe9f09305cb59
+            solr-keys: 50E3EE1C91C7E0CB4DFB007B369424FC98F3F6EC
     steps:
       -
         name: Checkout
