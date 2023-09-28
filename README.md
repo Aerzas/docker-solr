@@ -37,6 +37,7 @@ volumes:
 | `ENABLE_REMOTE_JMX_OPTS` | `"false"`           |
 | `SOLR_HOST`              | `localhost`         |
 | `SOLR_JAVA_MEM`          | `-Xms512m -Xmx512m` |
+| `SOLR_JETTY_HOST`        | `0.0.0.0`           |
 | `SOLR_PORT`              | `8983`              |
 | `SOLR_STOP_WAIT`         | `60`                |
 | **Core**                 |                     |
