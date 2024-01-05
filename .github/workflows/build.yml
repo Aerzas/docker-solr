@@ -20,9 +20,10 @@ jobs:
           -
             solr-version: 9
             solr-package: solr/solr
-            solr-package-version: 9.3.0
-            solr-sha512: fcd1ca482744f4a72c21c59d1877f3aeeb4b8683cf89af70bb10d29fc07da1858628b2666e3c363227e4b2f7a8ef33c2b63065811ae1c2f2843fe9f09305cb59
-            solr-keys: 50E3EE1C91C7E0CB4DFB007B369424FC98F3F6EC
+            solr-package-version: 9.4.0
+            solr-sha512: 7147caaec5290049b721f9a4e8b0c09b1775315fc4aa790fa7a88a783a45a61815b3532a938731fd583e91195492c4176f3c87d0438216dab26a07a4da51c1f5
+            solr-keys: 2289AC4180E130507D7A82F479C211E0AEFCA72E
+            solr-download-server: https://www.apache.org/dyn/closer.lua?action=download&filename=/solr/solr
     steps:
       -
         name: Checkout
@@ -50,5 +51,6 @@ jobs:
             SOLR_VERSION=${{ matrix.solr-package-version }}
             SOLR_SHA512=${{ matrix.solr-sha512 }}
             SOLR_KEYS=${{ matrix.solr-keys }}
+            SOLR_DOWNLOAD_SERVER=${{ matrix.solr-download-server }}
           push: true
           tags: aerzas/solr:${{ matrix.solr-version }}-latest,aerzas/solr:${{ matrix.solr-version }}-${{ github.ref_name }}
