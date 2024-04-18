@@ -14,9 +14,9 @@ jobs:
           -
             solr-version: 9
             solr-package: solr/solr
-            solr-package-version: 9.4.0
-            solr-sha512: 7147caaec5290049b721f9a4e8b0c09b1775315fc4aa790fa7a88a783a45a61815b3532a938731fd583e91195492c4176f3c87d0438216dab26a07a4da51c1f5
-            solr-keys: 2289AC4180E130507D7A82F479C211E0AEFCA72E
+            solr-package-version: 9.5.0
+            solr-sha512: e34b2421db8586691ff41b86beca77bcb61243ce8edfade74eda8da4b0fabde0078884db301350a0d0dfc4a6fee46320ddf059469300444da4e3693220df5e40
+            solr-keys: E05FDF113D89E7FB4A2DF4B2684D544160392455
             solr-download-server: https://www.apache.org/dyn/closer.lua?action=download&filename=/solr/solr
     steps:
       -
