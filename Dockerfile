@@ -96,7 +96,8 @@ ENV CORE_NAME=solr \
     SOLR_JETTY_HOST=0.0.0.0 \
     SOLR_PORT=8983 \
     SOLR_STOP_WAIT=60 \
-    SOLR_CONFIG_LIB_ENABLED=true
+    SOLR_CONFIG_LIB_ENABLED=false \
+    SOLR_MODULES='extraction,langid,ltr,analysis-extras'
 
 USER 1001
 
