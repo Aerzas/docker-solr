@@ -31,18 +31,19 @@ volumes:
 
 ## Environment Variables
 
-| Variable                 | Default Value       |
-|--------------------------|---------------------|
-| **Server**               |                     |
-| `ENABLE_REMOTE_JMX_OPTS` | `"false"`           |
-| `SOLR_HOST`              | `localhost`         |
-| `SOLR_JAVA_MEM`          | `-Xms512m -Xmx512m` |
-| `SOLR_JETTY_HOST`        | `0.0.0.0`           |
-| `SOLR_PORT`              | `8983`              |
-| `SOLR_STOP_WAIT`         | `60`                |
-| **Core**                 |                     |
-| `CORE_NAME`              | `solr`              |
-| `CORE_CONFIGSET`         | `_default`          |
+| Variable                  | Default Value       |
+|---------------------------|---------------------|
+| **Server**                |                     |
+| `ENABLE_REMOTE_JMX_OPTS`  | `"false"`           |
+| `SOLR_HOST`               | `localhost`         |
+| `SOLR_JAVA_MEM`           | `-Xms512m -Xmx512m` |
+| `SOLR_JETTY_HOST`         | `0.0.0.0`           |
+| `SOLR_PORT`               | `8983`              |
+| `SOLR_STOP_WAIT`          | `60`                |
+| `SOLR_CONFIG_LIB_ENABLED` | `true`              |
+| **Core**                  |                     |
+| `CORE_NAME`               | `solr`              |
+| `CORE_CONFIGSET`          | `_default`          |
 
 Any Solr variable declared in [solr.in.sh](https://github.com/apache/lucene-solr/blob/master/solr/bin/solr.in.sh) can be
 declared as an environment variable.
